@@ -1,0 +1,6 @@
+version: 0.2
+phases:
+  build:
+    commands:
+      - echo "Deploying to S3"
+      - aws s3 sync . s3://vivek-hello-world-2026 --exclude ".git/*" --exclude "buildspec.yml"
